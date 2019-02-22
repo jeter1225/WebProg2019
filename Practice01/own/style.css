@@ -1,0 +1,48 @@
+table{
+    margin: 1em 0 0;
+    width: 50%;
+
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+.tablestyle{
+    border-collapse: collapse;
+}
+
+a{
+    text-decoration: none;
+    text-emphasis: none;
+}
+mark{
+    background-color: green;
+    color: red;
+} 
+.framewrapper{
+    position: relative;
+    overflow: hidden;
+    width: 680px;
+    height: 690px;
+}
+.framestyle{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+.captionstyle{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+input{
+    margin: 10px;
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
+input::placeholder{
+    color: white;
+}
