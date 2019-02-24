@@ -1,176 +1,89 @@
-body {
-    background: white;
-    background-image: url('background.gif');
-    background-repeat: no-repeat;
-    background-position: top;
-    margin: 450px 20%;
-    font-family: 'Bad Script', cursive;;
+/* reset */
+:root { font: 20px / 1.2 "Roboto", sans-serif; }
+
+body,
+body * {
+  margin:     unset;
+  box-sizing: unset;
+  padding:    unset;
+  font-size:  unset;
+  color:      unset;
 }
 
-.container {
-    border-style: outset;
-    padding: 20px 0px;
-    background-color: black;
-    display: flex;
-    flex-flow: row wrap;
+article {
+	padding-top: 0.5in;
+	display: grid;
+	grid-template-columns: 1fr 0.5in [start] 1.25in 5in 1.25in [end] 0.5in 1fr;
 }
 
-.item {    
-    text-align: center;
-    transition: 0.2s;
-    margin: auto;
-    font-family: 'Pacifico', cursive;
-    font-size: 25px;
-    color: white;
+article * { grid-column: start / end; }
+
+@media (max-width: 8.5in) {
+	article { grid-template-columns: 1fr 5% [start] 15% 60% 15% [end] 5% 1fr; }
 }
 
-.item:hover {
-    transform: translateY(-10px); 
-    cursor: pointer;
+figure * { display: block; }
+img { width: 100%; }
+
+figcaption {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;    
 }
 
-h1.item:hover{
-    color: red;
+h1           { font: 700 2.0rem / 1.2 "Roboto"; color: hsl(000, 000%, 33%); }
+h2           { font: 400 1.5rem / 1.2 "Roboto"; color: hsl(120, 000%, 50%); }
+h3           { font: 700 1.2rem / 1.2 "Roboto"; color: hsl(120, 000%, 50%); }
+h4           { font: 700 1.0rem / 1.2 "Roboto"; color: hsl(120, 100%, 67%); }
+h5           { font: 700 0.8rem / 1.2 "Roboto"; color: hsl(120, 100%, 83%); }
+h6           { font: 700 0.5rem / 1.2 "Roboto"; color: hsl(120, 100%, 100%); }
+
+p            { font: 400 1.0rem / 1.5 "Roboto"; color: hsl(000, 000%, 33%); }
+figcaption p { font: 400 1.0rem / 1.5 "Roboto"; color: hsl(000, 000%, 83%); }
+
+@media (max-width: 8.5in) { :root { font-size: 18px; } }
+@media (max-width: 5.0in) { :root { font-size: 16px; } }
+
+a, a:visited, a:active {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+	position: relative;
+  transition: 0.5s color ease;
+	text-decoration: none;
+	color:#81B3D2;
 }
 
-h2.item:hover {
-    color: orange;
-}
-
-h3.item:hover {
-    color: yellow; 
-}
-
-h4.item:hover {
-    color: lightgreen;
-}
-
-h5.item:hover {
-    color: skyblue;
-}
-
-h6.item:hover {
-    color: plum;
-}
-
-.block1 {
-    font-size: 1.5em;
-    border-style: dotted;
-    margin: 20px 0px;
-    padding: 10px 20px;
-}
-
-blockquote {
-    background-color: azure;
-    font-size: 2em;
-    transition: 0.2s;
-}
-
-blockquote:hover {
-    font-weight: 900;
-    filter: brightness(0.95);
-}
-.url {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-.url a:link {
-    color:lightskyblue;   
-}
-.url a:hover {
-    cursor: pointer;
-    color: orangered;
-}
-
-.url a:visited {
-    color: blue;
-}
-
-.url a:active {
-    color: orange;
-}
-
-img {
-    border-radius: 10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    transition: 0.2s;
-}
-
-img:hover {
-    opacity: 0.8;
+a:hover {
+  color: #1E88A8;
 }
 
 input {
-    width: 200px;
-    height: 20px;
-    margin: 30px 0;
-    transition: width 0.5s;
+  /* width: 360px; */
+  background: #fff;
+  font: inherit;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .1);
+  border: 0;
+  outline: 0;
+  padding: 22px 18px;
 }
 
-input:hover{
-    width: 300px;
+th, td {
+  padding: 15px;
+  text-align: left;
 }
 
-table {
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    font-size: 150%;
-    transition: 0.2s;
+ul, ol {
+  list-style-position: inside;
 }
 
-table caption {
-    font-size: 200%;
-    font-weight: 500;
-}
-
-table th{
-    color: white;
-    background-color: darkgreen;
-}
-table td {
-    background-color: rgb(209, 248, 150);
-}
-table td:hover {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
-.list {
-    font-size: 150%;
-    color: rgb(4, 89, 138);
-    font-family: 'Amatic SC', cursive;
-}
-
-#G {
-    padding: 5%;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-color: black;
-    border-width: 5px;
-    text-align: center;
-    color: white;
-    background-color: seagreen;
-    font-style: italic;
-    font-size: 150%;
-}
-
-@keyframes bounce {
-    0%   {color: royalblue; left:0px; top:0px;}
-    25%  {color: deepskyblue; left:200px; top:0px;}
-    50%  {color: seagreen; left:200px; top:200px;}
-    75%  {color: forestgreen; left:0px; top:200px;}
-    100% {color: navy; left:0px; top:0px;}
-  }
-
-.last {
-    position: relative;
-    font-size: 2em;
-    animation-name: bounce;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+#title {
+  font-family: Raleway;
+  margin: 0;
+  padding: 0;
+	font-size: 23px;
+	font-weight: 800;
+  text-align: center;
+	border-bottom: 2px solid #f1f1f1;
+	padding-top: .1in;
+	padding-bottom: .1in;
 }
