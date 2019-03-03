@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Viewer</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    </head>
+    <body>
+        <div class="image-viewer__container">
+
+            <div class="image-viewer__title">Image Viewer</div>
+
+            <div class="image-viewer__main">
+                <div class="image-viewer__button-preview" id="backPreview">
+                </div>
+                <div class="image-viewer__button" onclick="changeImg(-1)" id="backButton" onmouseover="PrevImg(-1)" onmouseout="RemoveImg(-1)">
+                        <img src="images/back.png" alt="">
+                </div>
+
+                <div id="imageclass">
+                    <img src="images/cat02.jpg" alt="" id="display">
+                </div>
+
+                <div class="image-viewer__button-preview" id="nextPreview">
+                </div>
+                <div class="image-viewer__button" onclick="changeImg(1)" id="nextButton" onmouseover="PrevImg(1)" onmouseout="RemoveImg(1)">
+                        <img src="images/next.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="image-viewer__display-source-wrapper" id="source">
+                Source: <a href="https://pixabay.com/images/id-1149841/">https://pixabay.com/images/id-1149841/</a>
+            </div>
+        </div>
+    <!-- Try to implement an HTML that looks like the reference example:
+         https://github.com/ric2k1/ric2k1.github.io/blob/master/W2_0227/practice/img_viewer_begin/images/screenshot.png  -->
+    <!-- Please use the class names and IDs as defined in styles.css
+         so that the outlook can be the same as the reference. -->
+         <script src="main.js"></script>
+    </body>
+</html>
