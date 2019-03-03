@@ -2,6 +2,7 @@ var display = document.getElementById("display");
 var source = document.getElementById("source");
 var back_but = document.getElementById("back_but");
 var next_but = document.getElementById("next_but");
+var previewer_b = document.getElementById("previewer_b");
 var img_count = 0;
 var img_sources = [
     { url: 'https://gamewith.akamaized.net/article_tools/pricone-re/gacha/94461_main.jpg' , name: '智' },
@@ -15,6 +16,7 @@ this.display.src = img_sources[img_count].url;
 this.source.href = img_sources[img_count].url;
 this.source.innerHTML = img_sources[img_count].name;
 this.back_but.classList.add("disabled");
+
 
 function back(){
     if(this.img_count == 0){
