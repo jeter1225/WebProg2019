@@ -1,7 +1,7 @@
 # HW1 README
 ## 基本要求
 1. 可建立數個 TodoItems
-    $main.js$ 第28行 list_creator 這個function，由 createElement 產生各種tag，並藉由 appendChild 來將各個tag包覆起來，建立node關聯，中間的 setAttribute 設置各類參數，最後return給第12行的keyup。 我設置了一個全域陣列 todo_items ，將所有創造的list push進去，並在這裡設計最一開始沒有item時，footer不會出現，還有footer的uncompleted的計數器。
+    main.js 第28行 list_creator 這個function，由 createElement 產生各種tag，並藉由 appendChild 來將各個tag包覆起來，建立node關聯，中間的 setAttribute 設置各類參數，最後return給第12行的keyup。 我設置了一個全域陣列 todo_items ，將所有創造的list push進去，並在這裡設計最一開始沒有item時，footer不會出現，還有footer的uncompleted的計數器。
 2. 可新增刪除任意 TodoItem
     新增所需要的function在上面一點已經提過，至於刪除，可以到第158行 delete_item。將id與 todo_items相同的list透過 splice 刪除，順便刪掉 <ul> 裡面的child。若整個 TodoItem為空，則將footer隱藏。
 3. 可勾選已完成的 TodoItem
