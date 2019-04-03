@@ -8,22 +8,24 @@ import Input from '../components/Input'
 class Todos extends Component {
     constructor(props) {
         super(props);
-        this.state = { id: 0, list: [] };
+        this.state = { id: 0, list: [], clear: this.props.clear, del: [] };
         this.bi_list = [];
+        this.style = { textDecoration: 'none' };
     }
     todo_LIST = todo => this.setState(() => ({ things: todo }));
     handleInput = e => {
         if (e.key === "Enter" && e.target.value.trim() !== "") {
             const value = e.target.value.trim();
-            const new_item = {node: <List things = {value} id = {this.state.id} delete_item = {this.delete_item} />}
+            const new_item = {node: <List things = {value} id = {this.state.id} delete_item = {this.delete_item} select_item = {this.select_item} isComplete = {false} style = {this.style} /> };
             this.bi_list.push(this.state.id);
             this.setState(state => ({id: state.id + 1}));
-            this.setState(state => ({list: state.list.concat([new_item])}))
+            this.setState(state => ({list: state.list.concat([new_item])}));
             e.target.value = "";
         }
     };
 
     select_item = () => {
+        const index = this.bi_list.indexOf(parseInt(e.target.id));
 
     };
 
@@ -47,7 +49,6 @@ class Todos extends Component {
                 </section>
                 <Footer />
             </div>
-            
         );
     }
 }
