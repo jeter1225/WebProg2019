@@ -40,13 +40,24 @@
   width: 120px;
 }
 
+.calc-operator2 {
+  background-color: #dcdcdd;
+  border: 0.25px solid #b1b1b1;
+  font-size: 20px;
+  font-weight: 150;
+}
+
 .calc-number {
-  background-color: #d2d3d5;
+  background-color: white;
+  font-size: 27.5px;
+  /* #d2d3d5 */
 }
 
 .calc-operator {
   color: white;
   background-color: #f58c00;
+  font-size: 27px;
+  font-weight: 150;
 }
 
 /* clearfix
