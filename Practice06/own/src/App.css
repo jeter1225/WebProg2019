@@ -1,0 +1,124 @@
+.App {
+  text-align: center;
+}
+
+.article_img{
+  width: 28vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  text-align: left;
+  margin: 10px 20px 0px;
+}
+
+.article_wrapper{
+  width: 60vw;
+  height: 65vh;
+  margin: 20px;
+  border: 2px black solid;
+}
+
+.blog_title{
+  border: 1px solid black;
+}
+
+.title_bg{
+  min-height: 10vh;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.section_wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+.des_wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.des{
+  margin-top: 10px;
+}
+
+.tit{
+  position: relative;
+}
+
+.Auth{
+  font-size: 15px;
+  position: relative;
+  top: -55px;
+  right: -40%;
+  text-decoration: none;
+}
+
+.Nav:link {
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.Nav:visited {
+  color: #fff;
+}
+
+.Nav:hover {
+  color: yellow;
+}
+
+.Nav:active {
+  color: teal;
+}
+
+.home:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.home:visited {
+  color: #fff;
+}
+
+.home:hover {
+  color: yellow;
+}
+
+.home:active {
+  color: teal;
+}
+
+.art_title{
+  text-align: center;
+}
+
+.art_tit:link {
+  color: black;
+  text-decoration: none;
+}
+
+.art_tit:visited {
+  color: black;
+}
+
+.art_tit:hover {
+  color: rgb(0, 153, 255);
+}
+
+.art_tit:active {
+  color: teal;
+}
+
+
+
